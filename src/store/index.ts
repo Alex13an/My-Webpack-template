@@ -1,5 +1,9 @@
-import { configureStore } from "@reduxjs/toolkit";
-import RootReducer from "./RootReducer";
+import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import counterSlice from "./reducers/counterSlice";
+
+const RootReducer = combineReducers({
+	counterSlice,
+})
 
 export const store = configureStore({
 	reducer: {
