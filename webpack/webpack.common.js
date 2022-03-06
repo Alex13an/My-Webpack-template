@@ -23,24 +23,25 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/,
-        use: ['style-loader', 
-					{
-						loader: 'css-loader',
-						options: {
-							modules: {
-								localIdentName: '[local]-[hash:base64]',
-							},
-						},
-					},
-					'sass-loader'
-				],
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                localIdentName: '[local]-[hash:base64]',
+              },
+            },
+          },
+          'sass-loader',
+        ],
       },
       {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
         type: 'asset/resource',
-				generator: {
-					filename: 'assets/images/[hash][ext][query]'
-				}
+        generator: {
+          filename: 'assets/images/[hash][ext][query]',
+        },
       },
       {
         test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
@@ -51,8 +52,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '..', './build'),
     filename: '[name].[contenthash].js',
-		clean: true,
-		publicPath: '/',
+    clean: true,
+    publicPath: '/',
   },
   plugins: [
     new HtmlWebpackPlugin({
