@@ -3,7 +3,7 @@ My Webpack React config with Typescript, Redux, React Router, SASS, linters and 
 
 ## Getting started
 1. In your terminal run command `yarn install` for installing all required packages
-2. After that run `yarn husky install` to enable husky git hooks
+2. Run `yarn husky install` to enable husky git hooks
 3. Run `yarn start` to start app on localhost in development mode
 
 ## Available scripts

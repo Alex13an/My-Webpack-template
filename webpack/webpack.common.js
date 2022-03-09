@@ -23,6 +23,11 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+        exclude: /\.module\.s[ac]ss$/,
+      },
+      {
+        test: /\.s[ac]ss$/,
         use: [
           'style-loader',
           {
@@ -35,6 +40,7 @@ module.exports = {
           },
           'sass-loader',
         ],
+        include: /\.module\.s[ac]ss$/,
       },
       {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
